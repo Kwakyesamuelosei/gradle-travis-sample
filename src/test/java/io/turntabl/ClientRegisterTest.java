@@ -57,7 +57,7 @@ public class ClientRegisterTest {
         ClientRegister register =  new ClientRegister(newClients);
         Map<ServiceLevel, Long> actual = register.countServiceLevel();
         Map<ServiceLevel, Long> expected = register.countServiceLevel();
-        assertEquals("Get Count by Service Level: ",expected,actual);
+        assertEquals("Get Count By Service Level: ",expected,actual);
     }
 
 }
