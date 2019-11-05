@@ -38,6 +38,7 @@ public class ClientRegister {
         Map<ServiceLevel, Long> countingService =  clientList.stream()
                 .map(client -> client.getServiceLevel())
                 .collect(groupingBy(Function.identity(), counting()));
+//        System.out.println(countingService);
         return countingService;
     }
 

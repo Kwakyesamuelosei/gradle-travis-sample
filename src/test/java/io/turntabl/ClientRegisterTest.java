@@ -2,10 +2,7 @@ package io.turntabl;
 
 import org.junit.Test;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 
 import static org.junit.Assert.*;
 
@@ -56,7 +53,10 @@ public class ClientRegisterTest {
         );
         ClientRegister register =  new ClientRegister(newClients);
         Map<ServiceLevel, Long> actual = register.countServiceLevel();
-        Map<ServiceLevel, Long> expected = register.countServiceLevel();
+        Map<ServiceLevel, Long> expected = new HashMap<>();
+        expected.put(ServiceLevel.Gold, (long) 3);
+        expected.put(ServiceLevel.Platinum, (long) 2);
+        expected.put(ServiceLevel.Premium, (long) 1);
         assertEquals("Get Count By Service Level: ",expected,actual);
     }
 
